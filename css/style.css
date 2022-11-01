@@ -9,7 +9,7 @@
 
 body {
   margin:0;
-  background-color: #000;
+  background-color: #fff;
 }
 
 button:not([disabled]) {
@@ -28,19 +28,333 @@ button:not([disabled]) {
   --color-headings:crimson
 }
 
-.beginBlok {
-  width: 50%;
-  height: 30vh;
-  border: 2px solid white;
-  margin: auto;
-}
-
 
 
 
 /********************/
 /* ALGEMENE STYLING */
 /********************/
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.mario64 {
+  width: 25vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.mario64 img {
+  width: 50%;
+  height: 15%;
+
+  /* padding-bottom: 0vh; */
+  animation: fly1 5s ease infinite;
+}
+@keyframes fly1 {
+  0% {
+    margin-bottom: 20vh;
+    width: 30%;
+    height: 9%;
+  }
+  35% {
+    margin-bottom: 60vh;
+    width: 50%;
+    height: 15%;
+  }
+  50% {margin-bottom: 55vh;}
+  70% {
+    margin-bottom: 65vh;
+    width: 50%;
+    height: 15%;}
+  100% {
+    margin-bottom: 20vh;
+    width: 30%;
+    height: 9%;
+  }
+}
+
+.marioSunshine {
+  background-color: #fff;
+  width: 25vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.marioSunshine img {
+  width: 35%;
+  height: 24.5%;
+
+  animation: fly2 5s ease infinite;
+}
+@keyframes fly2 {
+  0% {
+    margin-bottom: 20vh;
+    width: 35%;
+    height: 24.5%;
+  }
+  35% {
+    margin-bottom: 55vh;
+    width: 45%;
+    height: 28%;
+  }
+  50% {margin-bottom: 50vh;}
+  70% {
+    margin-bottom: 60vh;
+    width: 45%;
+    height: 28%;}
+  100% {
+    margin-bottom: 20vh;
+    width: 30%;
+    height: 9%;
+  }
+}
+
+.marioGalaxy {
+  background-color: #000;
+  width: 25vw;
+  height: 100vh;
+}
+.marioOdyssey {
+  background-color: #00f;
+  width: 25vw;
+  height: 100vh;
+
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80vw 120vh;
+  background-image: url('../assets/OdyBack.jpg'); */
+}
+
+
+.tube64 {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 12vw;
+
+  transform: translateX(-50%);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to right,
+    #579c66,
+    #579c66 5px,
+    #6dad7b 15px,
+    #e9ffe8 33px,
+    #9dd591 50px,
+    #6bb765 100px,
+    #142e16 100%
+  );
+}
+.tube64:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    height: 8px;
+    width: 220px;
+    border-radius: 6px 6px 0 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1) 98%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+}
+.tube64:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    height: 50px;
+    width: 220px;
+    border-radius: 6px;
+    border-bottom: solid 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      to right,
+      #579c66,
+      #579c66 5px,
+      #6dad7b 18px,
+      #e9ffe8 36px,
+      #9dd591 53px,
+      #6bb765 103px,
+      #142e16 100%
+    );
+}
+.tubeSun {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 38vw;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to right,
+    #579c66,
+    #579c66 5px,
+    #6dad7b 15px,
+    #e9ffe8 33px,
+    #9dd591 50px,
+    #6bb765 100px,
+    #142e16 100%
+  );
+}
+.tubeSun:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    height: 8px;
+    width: 220px;
+    border-radius: 6px 6px 0 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1) 98%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+}
+.tubeSun:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    height: 50px;
+    width: 220px;
+    border-radius: 6px;
+    border-bottom: solid 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      to right,
+      #579c66,
+      #579c66 5px,
+      #6dad7b 18px,
+      #e9ffe8 36px,
+      #9dd591 53px,
+      #6bb765 103px,
+      #142e16 100%
+    );
+}
+.tubeGal {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 63vw;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to right,
+    #579c66,
+    #579c66 5px,
+    #6dad7b 15px,
+    #e9ffe8 33px,
+    #9dd591 50px,
+    #6bb765 100px,
+    #142e16 100%
+  );
+}
+.tubeGal:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    height: 8px;
+    width: 220px;
+    border-radius: 6px 6px 0 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1) 98%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+}
+.tubeGal:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    height: 50px;
+    width: 220px;
+    border-radius: 6px;
+    border-bottom: solid 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      to right,
+      #579c66,
+      #579c66 5px,
+      #6dad7b 18px,
+      #e9ffe8 36px,
+      #9dd591 53px,
+      #6bb765 103px,
+      #142e16 100%
+    );
+}
+.tubeOdy {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 88vw;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to right,
+    #579c66,
+    #579c66 5px,
+    #6dad7b 15px,
+    #e9ffe8 33px,
+    #9dd591 50px,
+    #6bb765 100px,
+    #142e16 100%
+  );
+}
+.tubeOdy:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    height: 8px;
+    width: 220px;
+    border-radius: 6px 6px 0 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1) 98%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+}
+.tubeOdy:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    height: 50px;
+    width: 220px;
+    border-radius: 6px;
+    border-bottom: solid 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      to right,
+      #579c66,
+      #579c66 5px,
+      #6dad7b 18px,
+      #e9ffe8 36px,
+      #9dd591 53px,
+      #6bb765 103px,
+      #142e16 100%
+    );
+}
+
+
 
 h1 {
   color:var(--color-headings);
