@@ -1,0 +1,52 @@
+/*************/
+/* CSS RESET */
+/*************/
+
+/* naar een idee van Jen Simmons */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+body {
+  margin:0;
+  background-color: #000;
+}
+
+button:not([disabled]) {
+  cursor:pointer;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+  --color-headings:crimson
+}
+
+.beginBlok {
+  width: 50%;
+  height: 30vh;
+  border: 2px solid white;
+  margin: auto;
+}
+
+
+
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+
+h1 {
+  color:var(--color-headings);
+}
+
+
+/* ... */
+
+
