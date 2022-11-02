@@ -18,18 +18,17 @@ button:not([disabled]) {
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-
 :root {
-  --color-headings:crimson
+  --color-pipesLight: lime;
+  --color-pipesMedium: green;
+  --color-pipesDark: darkgreen;
 }
-
 
 
 
 /********************/
 /* ALGEMENE STYLING */
 /********************/
-
 body {
   margin:0;
   background-color: #fff;
@@ -43,36 +42,69 @@ main ol {
   margin: 0;
   padding: 0;
 }
+
 ol li {
   display: flex;
   height: 100vh;
   width: 25vw;
 
   border: 1px solid black;
-}
-ol li:first-of-type {
-  background-color: #fff;
-  justify-content: center;
-  align-items: flex-end;
-}
-ol li:nth-of-type(2) {
-  background-color: #fff;
-  justify-content: center;
-  align-items: flex-end;
-}
-ol li:nth-of-type(3) {
-  background-color: #fff;
-  justify-content: center;
-  align-items: flex-end;
-}
-ol li:nth-of-type(4) {
+
   background-color: #fff;
   justify-content: center;
   align-items: flex-end;
 }
 
+/* ol li:first-of-type {
+  background-color: #fff;
+  justify-content: center;
+  align-items: flex-end;
+} */
 
-ol li:nth-of-type(2) div {
+
+ol li:first-of-type div:first-of-type {
+  position:relative;
+
+	height:28vh;
+	width:18vw;
+	
+	background-image:
+		linear-gradient(
+			to right,
+			var(--color-pipesMedium) 33%,
+			var(--color-pipesLight) 25%,
+      var(--color-pipesLight) 75%,
+			var(--color-pipesDark) 66%
+		);
+  border-radius:0 0 0 0;
+  box-shadow:
+		inset 0 -1.2em .5em -.5em rgb(0 0 0 / .35),
+    inset 0 2em .5em -.5em rgb(0 0 0 / .70);
+
+  display:grid;
+	justify-items:center;
+}
+ol li:first-of-type div:first-of-type::after {
+  content:"";
+	position:absolute;
+
+	bottom:100%;
+	width: 18vw;
+	height: 8vh;
+	
+	border-radius:0em 0em 0em 0em;
+	
+	background-image:
+		linear-gradient(
+			to right,
+			var(--color-pipesMedium) 28%,
+			var(--color-pipesLight) 20%,
+      var(--color-pipesLight) 70%,
+			var(--color-pipesDark) 66%
+		);
+}
+
+ol li:nth-of-type(2) div:first-of-type {
   position:relative;
 
 	height:35vh;
@@ -81,10 +113,10 @@ ol li:nth-of-type(2) div {
 	background-image:
 		linear-gradient(
 			to right,
-			darkgreen,
-			green,
-			green 33%,
-			lime
+			var(--color-pipesDark),
+			var(--color-pipesMedium),
+			var(--color-pipesMedium) 33%,
+			var(--color-pipesLight)
 		);
   border-radius:0 0 0 0;
   box-shadow:
@@ -93,7 +125,7 @@ ol li:nth-of-type(2) div {
   display:grid;
 	justify-items:center;
 }
-ol li:nth-of-type(2) div::after {
+ol li:nth-of-type(2) div:first-of-type::after {
   content:"";
 	position:absolute;
 
@@ -106,18 +138,18 @@ ol li:nth-of-type(2) div::after {
 	background-image:
 		linear-gradient(
 			to right,
-			darkgreen,
-			green,
-			green 33%,
-			lime
+			var(--color-pipesDark),
+			var(--color-pipesMedium),
+			var(--color-pipesMedium) 33%,
+			var(--color-pipesLight)
 		);
 	
 		box-shadow:
 			inset 0 -.80em .5em -.75em rgb(0 0 0 / .80),
-			inset 0 1.25em 0em -.75em rgb(255 255 255 / .35);
+			inset 0 1.55em 0em -.75em rgb(255 255 255 / .45);
 }
 
-ol li:nth-of-type(3) div {
+ol li:nth-of-type(3) div:first-of-type {
   position:relative;
 
 	height:45vh;
@@ -126,11 +158,11 @@ ol li:nth-of-type(3) div {
 	background-image:
 		linear-gradient(
 			to right,
-			darkgreen,
-			lime,
-			darkgreen 34%,
-      lime 60%,
-			darkgreen
+			var(--color-pipesDark),
+			var(--color-pipesLight),
+			var(--color-pipesDark) 34%,
+      var(--color-pipesLight) 60%,
+			var(--color-pipesDark)
 		);
   border-radius:0 0 .5em .5em;
   box-shadow:
@@ -140,7 +172,7 @@ ol li:nth-of-type(3) div {
   display:grid;
 	justify-items:center;
 }
-ol li:nth-of-type(3) div::after {
+ol li:nth-of-type(3) div:first-of-type::after {
   content:"";
 	position:absolute;
 
@@ -153,11 +185,11 @@ ol li:nth-of-type(3) div::after {
 	background-image:
 		linear-gradient(
 			to right,
-			darkgreen,
-			lime,
-			darkgreen 34%,
-      lime 60%,
-			darkgreen
+			var(--color-pipesDark),
+			var(--color-pipesLight),
+			var(--color-pipesDark) 34%,
+      var(--color-pipesLight) 60%,
+			var(--color-pipesDark)
 		);
 	
 		box-shadow:
@@ -165,7 +197,7 @@ ol li:nth-of-type(3) div::after {
 			inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
 }
 
-ol li:nth-of-type(4) div {
+ol li:nth-of-type(4) div:first-of-type {
   position: relative;
   height:40vh;
 	width:14vw;
@@ -173,10 +205,10 @@ ol li:nth-of-type(4) div {
   background-image:
 		linear-gradient(
 			to right,
-			lime,
-			white,
-			lime 33%,
-			darkgreen
+			var(--color-pipesLight),
+			#fff,
+			var(--color-pipesLight) 33%,
+			var(--color-pipesDark)
 		);
 	
 	border-radius:0 0 .5em .5em;
@@ -188,7 +220,7 @@ ol li:nth-of-type(4) div {
 	display:grid;
 	justify-items:center;
 }
-ol li:nth-of-type(4) div::after {
+ol li:nth-of-type(4) div:first-of-type::after {
   content:"";
 	position:absolute;
 
@@ -201,10 +233,10 @@ ol li:nth-of-type(4) div::after {
 	background-image:
 		linear-gradient(
 			to right,
-			lime,
-			white,
-			lime 33%,
-			darkgreen
+			var(--color-pipesLight),
+			#fff,
+			var(--color-pipesLight) 33%,
+			var(--color-pipesDark)
 		);
 	
 		box-shadow:
@@ -212,7 +244,27 @@ ol li:nth-of-type(4) div::after {
 			inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
 }
 
-
+.pipe:hover {
+  animation: pipeStretch 3s ease infinite;
+}
+@keyframes pipeStretch {
+  0%, 20% {
+    transform:none;
+  }
+  27% {
+    transform:scale(.8, 1.2); 
+  }
+  34% {
+    transform:scale(1, 1); 
+  }
+  38% {
+    transform:scale(.65, 1.35);
+    animation-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  }
+  45%, 100% {
+    transform:none;
+  }
+}
 
 
 
