@@ -6,7 +6,10 @@
 	font-family: marioSunshine;
 	src: url("../fonts/sunshine.OTF")
 }
-
+@font-face {
+	font-family: marioOdyssey;
+	src: url("../fonts/odyssey.otf");
+}
 
 
 /*************/
@@ -86,7 +89,7 @@ ol li:first-of-type {
 ol li:first-of-type div:first-of-type {
   position:relative;
 
-	height:28vh;
+	height:35vh;
 	width:18vw;
 	
 	background-image:
@@ -157,14 +160,14 @@ ol li:nth-of-type(2) {
 
 	color: #fff;
 	font-family: marioSunshine;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 ol li:nth-of-type(2) div:first-of-type {
   position:relative;
-
-	height:35vh;
-	width:18vw;
+  
+  height:35vh;
+  width:18vw;
 	
 	background-image:
 		linear-gradient(
@@ -179,10 +182,10 @@ ol li:nth-of-type(2) div:first-of-type {
 		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
 
   display:grid;
-	justify-items:center;
+  justify-items:center;
 }
 ol li:nth-of-type(2) div:first-of-type::after {
-  content:"";
+	content:"";
 	position:absolute;
 
 	bottom:100%;
@@ -208,39 +211,53 @@ ol li:nth-of-type(2) nav {
 	align-self: flex-start;
 	position: relative;
 
-	margin: 3vh 0 3vh 0;
-	padding: 10px 25px 25px 10px;
+	border-radius: 25px;
+	margin: 11vh 0 3vh 0;
+	padding: 1px 1px;
 	
-	height: 3vh;
+	height: 4vh;
 	width: 17vw;
 
 	background-color: rgb(0 0 190/ .70);
 }
-
 ol li:nth-of-type(2) nav::before {
-	content: "Oh no! The villagers are trapped";
-	
-	height: 3vh;
+	content: "Oh no! The villagers are ";
+	position:absolute;
+	bottom:120%;
+
+	border-radius: 25px;
+	height: 4vh;
 	width: 17vw;
 
 	background-color: rgb(0 0 190/ .70);
 }
 ol li:nth-of-type(2) nav::after {
 	content: "they will fucking die!";
+	position:absolute;
+	top:120%;
 
-	height: 3vh;
+	border-radius: 25px;
+	height: 4vh;
 	width: 17vw;
 
 	background-color: rgb(0 0 190/ .70);
 }
 
 
+ol li:nth-of-type(3) {
+	display: flex;
+	flex-flow: row wrap;
+
+	color: #000;
+	font-family: marioSunshine;
+	font-size: 1.2em;
+}
 
 ol li:nth-of-type(3) div:first-of-type {
   position:relative;
 
-	height:45vh;
-	width:13vw;
+	height:35vh;
+	width:14vw;
 	
 	background-image:
 		linear-gradient(
@@ -264,7 +281,7 @@ ol li:nth-of-type(3) div:first-of-type::after {
 	position:absolute;
 
 	bottom:100%;
-	width: 15vw;
+	width: 16vw;
 	height: 8vh;
 	
 	border-radius:.5em;
@@ -283,10 +300,52 @@ ol li:nth-of-type(3) div:first-of-type::after {
 			inset 0 -.5em .5em -.5em rgb(0 0 0 / .75),
 			inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
 }
+ol li:nth-of-type(3) nav {
+	align-self: flex-start;
+	position: relative;
+
+	margin: 6.5vh 0 3vh 0;
+	padding: .25em 3.5em .5em 1em;
+
+	height: 12vh;
+	width: 20vw;
+
+	box-shadow: 8px 8px 2px 0px rgb(0 0 0 / .35);
+	border: 4px solid gray;
+	border-radius: 30px;
+}
+ol li:nth-of-type(3) nav::after {
+	content: "A";
+	position: absolute;
+
+	bottom: 10%;
+	right: 5%;
+
+	height: 2.25em;
+	width: 2.25em;
+
+	padding: 0 auto;
+	align-items: center;
+
+	border: 2px solid #000;
+	box-shadow:
+		inset 4px 4px 2px 0px rgb(0 0 0 / .25);
+	border-radius: 10em;
+}
+
+
+ol li:nth-of-type(4) {
+	display: flex;
+	flex-flow: row wrap;
+
+	color: #000;
+	font-family: marioOdyssey;
+	font-size: 1.2em;
+}
 
 ol li:nth-of-type(4) div:first-of-type {
   position: relative;
-  height:40vh;
+  height:35vh;
 	width:14vw;
 
   background-image:
@@ -330,6 +389,42 @@ ol li:nth-of-type(4) div:first-of-type::after {
 			inset 0 -.5em .5em -.5em rgb(0 0 0 / .75),
 			inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
 }
+ol li:nth-of-type(4) nav {
+	align-self: flex-start;
+	position: relative;
+
+	line-height: 1.25em;
+
+	margin: 8.5vh 0 3vh 0;
+	padding: .25em 5em .25em .1em;
+
+	height: 10vh;
+	width: 20vw;
+}
+ol li:nth-of-type(4) nav::after {
+	content: "A";
+	position: absolute;
+
+	color: #fff;
+	background-color: #000
+	;
+	bottom: 20%;
+	right: 8%;
+
+	height: 2.25em;
+	width: 2.25em;
+
+	padding: 0 auto;
+
+	border: 2px solid #000;
+	border-radius: 10em;
+/* 
+	align-items: center;
+	justify-content: center; */
+}
+
+
+
 
 .pipe:hover {
   animation: pipeStretch 3s ease infinite;
