@@ -1,3 +1,14 @@
+@font-face {
+	font-family: mario64;
+	src: url("../fonts/Mario64.ttf");
+}
+@font-face {
+	font-family: marioSunshine;
+	src: url("../fonts/sunshine.OTF")
+}
+
+
+
 /*************/
 /* CSS RESET */
 /*************/
@@ -45,6 +56,7 @@ main ol {
 
 ol li {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   width: 25vw;
 
@@ -55,12 +67,21 @@ ol li {
   align-items: flex-end;
 }
 
+
 /* ol li:first-of-type {
   background-color: #fff;
   justify-content: center;
   align-items: flex-end;
 } */
 
+ol li:first-of-type {
+	display: flex;
+	flex-flow: row wrap;
+
+	color: #fff;
+	font-family: mario64;
+	font-size: 1.5em;
+}
 
 ol li:first-of-type div:first-of-type {
   position:relative;
@@ -102,6 +123,41 @@ ol li:first-of-type div:first-of-type::after {
       var(--color-pipesLight) 70%,
 			var(--color-pipesDark) 66%
 		);
+}
+ol li:first-of-type nav {
+	align-self: flex-start;
+	position: relative;
+
+	margin: 3vh 0 0 0;
+	padding: 10px 25px 25px 10px;
+	
+	height: 21vh;
+	width: 17vw;
+
+	background-color: rgb(0 0 0/ .70);
+}
+ol li:first-of-type nav::after {
+	content: "";
+	position: absolute;
+
+	bottom:5%;
+	right: 4%;
+	width: 0;
+	height: 0;
+
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 15px solid #fff;
+}
+
+
+ol li:nth-of-type(2) {
+	display: flex;
+	flex-flow: row wrap;
+
+	color: #fff;
+	font-family: marioSunshine;
+	font-size: 1.5em;
 }
 
 ol li:nth-of-type(2) div:first-of-type {
@@ -148,6 +204,37 @@ ol li:nth-of-type(2) div:first-of-type::after {
 			inset 0 -.80em .5em -.75em rgb(0 0 0 / .80),
 			inset 0 1.55em 0em -.75em rgb(255 255 255 / .45);
 }
+ol li:nth-of-type(2) nav {
+	align-self: flex-start;
+	position: relative;
+
+	margin: 3vh 0 3vh 0;
+	padding: 10px 25px 25px 10px;
+	
+	height: 3vh;
+	width: 17vw;
+
+	background-color: rgb(0 0 190/ .70);
+}
+
+ol li:nth-of-type(2) nav::before {
+	content: "Oh no! The villagers are trapped";
+	
+	height: 3vh;
+	width: 17vw;
+
+	background-color: rgb(0 0 190/ .70);
+}
+ol li:nth-of-type(2) nav::after {
+	content: "they will fucking die!";
+
+	height: 3vh;
+	width: 17vw;
+
+	background-color: rgb(0 0 190/ .70);
+}
+
+
 
 ol li:nth-of-type(3) div:first-of-type {
   position:relative;
@@ -265,8 +352,6 @@ ol li:nth-of-type(4) div:first-of-type::after {
     transform:none;
   }
 }
-
-
 
 
 
