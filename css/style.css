@@ -86,7 +86,7 @@ ol li:first-of-type {
 ol li:first-of-type div:first-of-type {
   position:relative;
 
-	height:35vh;
+	height:30vh;
 	width:18vw;
 	
 	background-image:
@@ -149,6 +149,28 @@ ol li:first-of-type nav::after {
 	border-right: 20px solid transparent;
 	border-top: 15px solid #fff;
 }
+ol li:first-of-type img {
+	filter: brightness(125%) saturate(150%) contrast(120%);
+	-webkit-filter: brightness(125%) saturate(150%) contrast(120%);
+	-moz-filter: brightness(125%) saturate(150%) contrast(120%);
+
+	height: 18vh;
+	width: 15vw;
+	margin-top: -20vh;
+
+	/* animation: powerUp 5s ease infinite; */
+}
+@keyframes powerUp {
+	0% {
+		margin-top: -20vh;
+	}
+	50% {
+		margin-top: -10vh;
+	}
+	100% {
+		margin-top: -30vh;
+	}
+}
 
 
 ol li:nth-of-type(2) {
@@ -166,7 +188,7 @@ ol li:nth-of-type(2) {
 ol li:nth-of-type(2) div:first-of-type {
   position:relative;
   
-  height:35vh;
+  height:31vh;
   width:18vw;
 	
 	background-image:
@@ -229,6 +251,8 @@ ol li:nth-of-type(2) nav::before {
 	height: 4vh;
 	width: 17vw;
 
+	text-align: center;
+
 	background-color: rgb(0 0 190/ .80);
 }
 ol li:nth-of-type(2) nav::after {
@@ -240,7 +264,14 @@ ol li:nth-of-type(2) nav::after {
 	height: 4vh;
 	width: 17vw;
 
+	text-align: center;
+
 	background-color: rgb(0 0 190/ .80);
+}
+ol li:nth-of-type(2) img {
+	width: 10vw;
+	height: 28vh;
+	margin-top: -5vh;
 }
 
 
@@ -259,7 +290,7 @@ ol li:nth-of-type(3) {
 ol li:nth-of-type(3) div:first-of-type {
   position:relative;
 
-	height:35vh;
+	height:30vh;
 	width:14vw;
 	
 	background-image:
@@ -338,13 +369,20 @@ ol li:nth-of-type(3) nav::after {
 		inset 4px 4px 2px 0px rgb(0 0 0 / .25);
 	border-radius: 10em;
 }
+ol li:nth-of-type(3) img {
+	align-self: flex-start;
+	position: relative;
+	
+	width: 10vw;
+	height: 23vh;
+}
 
 
 ol li:nth-of-type(4) {
 	display: flex;
 	flex-flow: row wrap;
 
-	color: #000;
+	color: #fff;
 	font-family: marioOdyssey;
 	font-size: 1.2em;
 
@@ -354,7 +392,7 @@ ol li:nth-of-type(4) {
 
 ol li:nth-of-type(4) div:first-of-type {
   position: relative;
-  height:35vh;
+  height:29vh;
 	width:14vw;
 
   background-image:
@@ -405,16 +443,19 @@ ol li:nth-of-type(4) nav {
 	line-height: 1.25em;
 
 	margin: 8.5vh 0 3vh 0;
-	padding: .25em 5em .25em .1em;
+	padding: .5em 5em .25em .5em;
 
 	height: 10vh;
 	width: 20vw;
+	background-color: rgb(255 255 255 / .25);
+	border-radius: 20px;
+	text-shadow: 2px 2px #000;
 }
 ol li:nth-of-type(4) nav::after {
 	content: "A";
 	position: absolute;
 
-	color: #fff;
+	color: rgb(255 255 255 / .8)	;
 	background-color: #000;
 	bottom: 20%;
 	right: 8%;
@@ -424,15 +465,22 @@ ol li:nth-of-type(4) nav::after {
 
 	padding: 0 auto;
 	text-align: center;
+	line-height: 2;
 
 	border: 2px solid #000;
 	border-radius: 10em;
 }
 
 
-
-.pipe:hover {
-  animation: pipeStretch 3s ease infinite;
+.pipe {
+	animation-name: pipeStretch;
+	animation-duration: 2.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-play-state: paused;
+}
+.pipe.playAnimation {
+	animation-play-state: running;
 }
 @keyframes pipeStretch {
   0%, 20% {
