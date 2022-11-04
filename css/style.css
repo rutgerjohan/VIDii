@@ -63,7 +63,7 @@ ol li {
   height: 100vh;
   width: 25vw;
 
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
   background-color: #fff;
   justify-content: center;
@@ -150,26 +150,16 @@ ol li:first-of-type nav::after {
 	border-top: 15px solid #fff;
 }
 ol li:first-of-type img {
-	filter: brightness(125%) saturate(150%) contrast(120%);
-	-webkit-filter: brightness(125%) saturate(150%) contrast(120%);
-	-moz-filter: brightness(125%) saturate(150%) contrast(120%);
-
+	position: relative;
 	height: 18vh;
 	width: 15vw;
 	margin-top: -20vh;
 
-	/* animation: powerUp 5s ease infinite; */
-}
-@keyframes powerUp {
-	0% {
-		margin-top: -20vh;
-	}
-	50% {
-		margin-top: -10vh;
-	}
-	100% {
-		margin-top: -30vh;
-	}
+
+
+	filter: brightness(125%) saturate(150%) contrast(120%);
+	-webkit-filter: brightness(125%) saturate(150%) contrast(120%);
+	-moz-filter: brightness(125%) saturate(150%) contrast(120%);
 }
 
 
@@ -370,11 +360,13 @@ ol li:nth-of-type(3) nav::after {
 	border-radius: 10em;
 }
 ol li:nth-of-type(3) img {
-	align-self: flex-start;
 	position: relative;
+	top: 0;
+	left: 0;
 	
-	width: 10vw;
+	width: 12vw;
 	height: 23vh;
+	margin-bottom: 5vh;
 }
 
 
@@ -442,11 +434,11 @@ ol li:nth-of-type(4) nav {
 
 	line-height: 1.25em;
 
-	margin: 8.5vh 0 3vh 0;
+	margin: 6.75vh 0 3vh 0;
 	padding: .5em 5em .25em .5em;
 
-	height: 10vh;
-	width: 20vw;
+	height: 12vh;
+	width: 22vw;
 	background-color: rgb(255 255 255 / .25);
 	border-radius: 20px;
 	text-shadow: 2px 2px #000;
@@ -470,11 +462,47 @@ ol li:nth-of-type(4) nav::after {
 	border: 2px solid #000;
 	border-radius: 10em;
 }
+ol li:nth-of-type(4) img {
+	position: absolute;
+	top: 35vh;
+	left: 82vw;
+	width: 12vw;
+	height: 15vh;
+	margin-bottom: 8vh;
+
+	animation-name: powerDown;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-play-state: paused;
+}
+ol li:nth-of-type(4) img.uitDeBuis {
+	animation-play-state: running;
+}
+@keyframes powerDown {
+	0% {
+		opacity: 0;
+		transform: scale(-50%);
+		margin-top: 30vh;
+	}
+	60% {
+		opacity: 1;
+		transform: scale(-30%);
+		margin-top: 10vh;
+	}
+	100% {
+		opacity: 1;
+		height: 18vh;
+		width: 15vw;
+		margin-top: 0vh;
+	}
+}
+
 
 
 .pipe {
 	animation-name: pipeStretch;
-	animation-duration: 2.5s;
+	animation-duration: 3s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
 	animation-play-state: paused;
@@ -500,3 +528,23 @@ ol li:nth-of-type(4) nav::after {
     transform:none;
   }
 }
+
+
+/* @keyframes powerUp {
+	0% {
+		opacity: 1;
+		height: 18vh;
+		width: 15vw;
+		margin-top: 0vh;
+	}
+	60% {
+		opacity: 1;
+		transform: scale(-30%);
+		margin-top: 10vh;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(-50%);
+		margin-top: 30vh;
+	}
+} */

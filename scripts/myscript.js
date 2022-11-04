@@ -20,3 +20,16 @@ function pipeGalAnimation() {
 function pipeOdyAnimation() {
     pipeOdy.classList.add("playAnimation");
 }
+
+// pipe64.addEventListener("click" powerUp64);
+// function powerUp64() {
+//     var image64 = document.querySelector("ol li:first-of-type img");
+//     image64.classList.add("uitDeBuis")
+// }
+
+
+pipeOdy.addEventListener("click", powerUpOdy);
+function powerUpOdy() {
+    var imageOdy = document.querySelector("ol li:nth-of-type(4) img");
+    imageOdy.classList.add("uitDeBuis");
+}
