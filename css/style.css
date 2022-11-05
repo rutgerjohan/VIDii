@@ -15,7 +15,6 @@
 /*************/
 /* CSS RESET */
 /*************/
-
 /* naar een idee van Jen Simmons */
 *, *::after, *::before {
   box-sizing:border-box;  
@@ -24,7 +23,6 @@
 button:not([disabled]) {
   cursor:pointer;
 }
-
 
 
 
@@ -63,8 +61,6 @@ ol li {
   height: 100vh;
   width: 25vw;
 
-  /* border: 1px solid black; */
-
   background-color: #fff;
   justify-content: center;
   align-items: flex-end;
@@ -82,7 +78,6 @@ ol li:first-of-type {
 	background-image: url(../assets/scenery64.jpeg);
 	background-size: 25vw 100vh;
 }
-
 ol li:first-of-type div:first-of-type {
   position:relative;
 
@@ -128,6 +123,8 @@ ol li:first-of-type nav {
 	align-self: flex-start;
 	position: relative;
 
+	line-height: 1.5em;
+
 	margin: 3vh 0 0 0;
 	padding: 10px 25px 25px 10px;
 	
@@ -150,16 +147,21 @@ ol li:first-of-type nav::after {
 	border-top: 15px solid #fff;
 }
 ol li:first-of-type img {
-	position: relative;
-	height: 18vh;
+	position: absolute;
+	top: 35vh;
+	left: 4.5vw;
 	width: 15vw;
-	margin-top: -20vh;
+	height: 18vh;
+	margin-top: 0vh;
 
-
-
-	filter: brightness(125%) saturate(150%) contrast(120%);
-	-webkit-filter: brightness(125%) saturate(150%) contrast(120%);
-	-moz-filter: brightness(125%) saturate(150%) contrast(120%);
+	animation-name: powerDown;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-play-state: paused;
+}
+ol li:first-of-type img.uitDeBuis {
+	animation-play-state: running;
 }
 
 
@@ -174,7 +176,6 @@ ol li:nth-of-type(2) {
 	background-image: url("../assets/scenerySun.jpg");
 	background-size: 25vw 100vh;
 }
-
 ol li:nth-of-type(2) div:first-of-type {
   position:relative;
   
@@ -259,9 +260,21 @@ ol li:nth-of-type(2) nav::after {
 	background-color: rgb(0 0 190/ .80);
 }
 ol li:nth-of-type(2) img {
+	position: absolute;
+	top: 30vh;
+	left: 32vw;
 	width: 10vw;
 	height: 28vh;
-	margin-top: -5vh;
+	margin-top: 0vh;
+
+	animation-name: powerDown;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-play-state: paused;
+}
+ol li:nth-of-type(2) img.uitDeBuis {
+	animation-play-state: running;
 }
 
 
@@ -271,12 +284,11 @@ ol li:nth-of-type(3) {
 
 	color: #000;
 	font-family: marioSunshine;
-	font-size: 1.2em;
+	font-size: 1.25em;
 
 	background-image: url("../assets/sceneryGal.jpg");
 	background-size: 25vw 100vh;
 }
-
 ol li:nth-of-type(3) div:first-of-type {
   position:relative;
 
@@ -328,10 +340,10 @@ ol li:nth-of-type(3) nav {
 	align-self: flex-start;
 	position: relative;
 
-	line-height: 1.75em;
+	line-height: 1.25em;
 
 	margin: 6.5vh 0 3vh 0;
-	padding: .25em 3.5em .5em 1em;
+	padding: .25em 3.5em .5em .75em;
 
 	height: 12vh;
 	width: 20vw;
@@ -353,6 +365,7 @@ ol li:nth-of-type(3) nav::after {
 
 	padding: 0 auto;
 	text-align: center;
+	line-height: 2em;
 
 	border: 2px solid #000;
 	box-shadow:
@@ -360,13 +373,21 @@ ol li:nth-of-type(3) nav::after {
 	border-radius: 10em;
 }
 ol li:nth-of-type(3) img {
-	position: relative;
-	top: 0;
-	left: 0;
-	
+	position: absolute;
+	top: 35vh;
+	left: 56vw;
 	width: 12vw;
 	height: 23vh;
-	margin-bottom: 5vh;
+	margin-top: 0vh;
+
+	animation-name: powerDown;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-play-state: paused;
+}
+ol li:nth-of-type(3) img.uitDeBuis {
+	animation-play-state: running;
 }
 
 
@@ -376,12 +397,11 @@ ol li:nth-of-type(4) {
 
 	color: #fff;
 	font-family: marioOdyssey;
-	font-size: 1.2em;
+	font-size: 1.1em;
 
 	background-image: url(../assets/sceneryOdy.jpg);
 	background-size: 25vw 100vh;
 }
-
 ol li:nth-of-type(4) div:first-of-type {
   position: relative;
   height:29vh;
@@ -411,7 +431,7 @@ ol li:nth-of-type(4) div:first-of-type::after {
 
   bottom:100%;
 	width: 16vw;
-	height: 10vh;
+	height: 9vh;
 	
 	border-radius:.5em;
 	
@@ -432,12 +452,12 @@ ol li:nth-of-type(4) nav {
 	align-self: flex-start;
 	position: relative;
 
-	line-height: 1.25em;
+	line-height: 1.5em;
 
-	margin: 6.75vh 0 3vh 0;
+	margin: 6.5vh 0 3vh 0;
 	padding: .5em 5em .25em .5em;
 
-	height: 12vh;
+	height: 13vh;
 	width: 22vw;
 	background-color: rgb(255 255 255 / .25);
 	border-radius: 20px;
@@ -465,7 +485,7 @@ ol li:nth-of-type(4) nav::after {
 ol li:nth-of-type(4) img {
 	position: absolute;
 	top: 35vh;
-	left: 82vw;
+	left: 81.5vw;
 	width: 12vw;
 	height: 15vh;
 	margin-bottom: 8vh;
@@ -482,21 +502,26 @@ ol li:nth-of-type(4) img.uitDeBuis {
 @keyframes powerDown {
 	0% {
 		opacity: 0;
-		transform: scale(-50%);
+		transform: scale(0%);
 		margin-top: 30vh;
 	}
-	60% {
+	7% {
+		opacity: 0;
+		transform: scale(0%);
+		margin-top: 30vh;
+	}
+	65% {
 		opacity: 1;
-		transform: scale(-30%);
+		transform: scale(50%);
 		margin-top: 10vh;
 	}
 	100% {
 		opacity: 1;
-		height: 18vh;
-		width: 15vw;
 		margin-top: 0vh;
+		transform: scale(100%);
 	}
 }
+
 
 
 
@@ -514,14 +539,14 @@ ol li:nth-of-type(4) img.uitDeBuis {
   0%, 20% {
     transform:none;
   }
-  27% {
-    transform:scale(.8, 1.2); 
+  16% {
+    transform:scale(.9, 1.1); 
   }
-  34% {
+  28% {
     transform:scale(1, 1); 
   }
-  38% {
-    transform:scale(.65, 1.35);
+  34% {
+    transform:scale(.65, 1.25);
     animation-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
   }
   45%, 100% {
@@ -529,22 +554,58 @@ ol li:nth-of-type(4) img.uitDeBuis {
   }
 }
 
+@media only screen and (max-width: 800px) {
+	main ol {
+		display: flex;
+		flex-flow: row wrap;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	main ol li {
+		display: flex;
+		flex-flow: row wrap;
 
-/* @keyframes powerUp {
-	0% {
-		opacity: 1;
-		height: 18vh;
-		width: 15vw;
-		margin-top: 0vh;
+		color: #fff;
+
+		height: 100vh;
+		width: 100vw;
+
+		justify-content: center;
+  		align-items: flex-end;
 	}
-	60% {
-		opacity: 1;
-		transform: scale(-30%);
-		margin-top: 10vh;
+	ol li:first-of-type {
+		background-size: 100vw 100vh;
+
+		display: flex;
+		flex-flow: row wrap;
 	}
-	100% {
-		opacity: 0;
-		transform: scale(-50%);
-		margin-top: 30vh;
+	ol li:first-of-type div:first-of-type {
+		position:relative;
+		height:45vh;
+		width:50vw;
+		background-image:
+			linear-gradient(
+				to right,
+				var(--color-pipesMedium) 33%,
+				var(--color-pipesLight) 25%,
+      			var(--color-pipesLight) 75%,
+				var(--color-pipesDark) 66%
+			);
+  		border-radius:0 0 0 0;
+  		box-shadow:
+			inset 0 -1.2em .5em -.5em rgb(0 0 0 / .35),
+    		inset 0 2em .5em -.5em rgb(0 0 0 / .70);
 	}
-} */
+
+
+	ol li:nth-of-type(2) {
+		background-size: 100vw 100vh;
+	}
+	ol li:nth-of-type(3) {
+		background-size: 100vw 100vh;
+	}
+	ol li:nth-of-type(4) {
+		background-size: 100vw 100vh;
+	}
+  }
