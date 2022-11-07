@@ -49,7 +49,7 @@ body {
 img:hover {
 	cursor: crosshair;
 }
-nav:hover {
+nav:hover, p:hover {
 	cursor: pointer;
 }
 div:hover {
@@ -84,8 +84,9 @@ ol li:first-of-type {
 	font-family: mario64;
 	font-size: 1.5em;
 }
-ol li:first-of-type div:first-of-type {
-  	position:relative;
+ol li:first-of-type button {
+	border: none;
+	position:relative;
 	height:30vh;
 	width:18vw;
 	background-image:
@@ -103,7 +104,7 @@ ol li:first-of-type div:first-of-type {
   display:grid;
   justify-items:center;
 }
-ol li:first-of-type div:first-of-type::after {
+ol li:first-of-type button::after {
 	content:"";
 	position:absolute;
 	bottom:100%;
@@ -166,13 +167,14 @@ ol li:nth-of-type(2) {
 	display: flex;
 	flex-flow: row wrap;
 	font-family: marioSunshine;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
-ol li:nth-of-type(2) div:first-of-type {
-  position:relative;
-  height:31vh;
-  width:18vw;
-  background-image:
+ol li:nth-of-type(2) button {
+	border: none;
+	position:relative;
+	height:31vh;
+	width:18vw;
+	background-image:
 		linear-gradient(
 			to right,
 			var(--color-pipesDark),
@@ -180,13 +182,13 @@ ol li:nth-of-type(2) div:first-of-type {
 			var(--color-pipesMedium) 33%,
 			var(--color-pipesLight)
 		);
-  border-radius:0 0 0 0;
-  box-shadow:
+	border-radius:0 0 0 0;
+	box-shadow:
 		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
-  display:grid;
-  justify-items:center;
+	display:grid;
+	justify-items:center;
 }
-ol li:nth-of-type(2) div:first-of-type::after {
+ol li:nth-of-type(2) button::after {
 	content:"";
 
 	border-radius:.8em .8em 0em 0em;
@@ -206,37 +208,37 @@ ol li:nth-of-type(2) div:first-of-type::after {
 			inset 0 -.80em .5em -.75em rgb(0 0 0 / .80),
 			inset 0 1.55em 0em -.75em rgb(255 255 255 / .45);
 }
-ol li:nth-of-type(2) nav {
+ol li:nth-of-type(2) p:first-of-type {
 	align-self: flex-start;
+	text-align: center;
+
+	justify-content: space-between;
+	width: 20vw;
+	height: 5vh;
+	
 	background-color: rgb(0 0 190/ .80);
 	border-radius: 25px;
-	height: 4vh;
-	margin: 11vh 0 3vh 0;
-	padding: 0px 0px;
+
+	margin: 8vh 0 0 0;
+	padding: 1vh 0 0 0;
 	position: relative;
-	width: 17vw;
-}
-ol li:nth-of-type(2) nav::before {
-	content: "Oh no! The villagers are ";
 
+}
+ol li:nth-of-type(2) p:nth-of-type(2) {
+	align-self: flex-start;
+	text-align: center;
+
+	justify-content: space-between;
+	width: 20vw;
+	height: 5vh;
+	
 	background-color: rgb(0 0 190/ .80);
 	border-radius: 25px;
-	bottom:120%;
-	height: 4vh;
-	position:absolute;
-	text-align: center;
-	width: 17vw;
-}
-ol li:nth-of-type(2) nav::after {
-	content: "they will fucking die!";
 
-	background-color: rgb(0 0 190/ .80);
-	border-radius: 25px;
-	height: 4vh;
-	position:absolute;
-	text-align: center;
-	top:120%;
-	width: 17vw;
+	margin: -17vh 0 0 0;
+	padding: 1vh 0 0 0;
+	position: relative;
+
 }
 ol li:nth-of-type(2) img {
 	height: 28vh;
@@ -266,11 +268,12 @@ ol li:nth-of-type(3) {
 	font-family: marioSunshine;
 	font-size: 1.25em;
 }
-ol li:nth-of-type(3) div:first-of-type {
-  height:30vh;
-  position:relative;
-  width:14vw;
-  background-image:
+ol li:nth-of-type(3) button {
+	border: none;
+	height:30vh;
+	position:relative;
+	width:14vw;
+	background-image:
 		linear-gradient(
 			to right,
 			var(--color-pipesDark),
@@ -279,14 +282,14 @@ ol li:nth-of-type(3) div:first-of-type {
       var(--color-pipesLight) 60%,
 			var(--color-pipesDark)
 		);
-  border-radius:0 0 .5em .5em;
-  box-shadow:
+	border-radius:0 0 .5em .5em;
+	box-shadow:
 		inset 0 1em 1em -1em rgb(0 0 0 / .5),
 		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
-  display:grid;
-  justify-items:center;
+	display:grid;
+	justify-items:center;
 }
-ol li:nth-of-type(3) div:first-of-type::after {
+ol li:nth-of-type(3) button::after {
   content:"";
   
   position:absolute;
@@ -364,11 +367,12 @@ ol li:nth-of-type(4) {
 	font-family: marioOdyssey;
 	font-size: 1.1em;
 }
-ol li:nth-of-type(4) div:first-of-type {
-  position: relative;
-  height:29vh;
-  width:14vw;
-  background-image:
+ol li:nth-of-type(4) button {
+	border: none;
+	position: relative;
+	height:29vh;
+	width:14vw;
+	background-image:
 		linear-gradient(
 			to right,
 			var(--color-pipesLight),
@@ -383,7 +387,7 @@ ol li:nth-of-type(4) div:first-of-type {
 	display:grid;
 	justify-items:center;
 }
-ol li:nth-of-type(4) div:first-of-type::after {
+ol li:nth-of-type(4) button::after {
   content:"";
   border-radius:.5em;
   bottom:100%;

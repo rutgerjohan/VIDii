@@ -1,7 +1,7 @@
-var pipe64 = document.querySelector("ol li:first-of-type div");
-var pipeSun = document.querySelector("ol li:nth-of-type(2) div");
-var pipeGal = document.querySelector("ol li:nth-of-type(3) div");
-var pipeOdy = document.querySelector("ol li:nth-of-type(4) div");
+var pipe64 = document.querySelector("ol li:first-of-type button");
+var pipeSun = document.querySelector("ol li:nth-of-type(2) button");
+var pipeGal = document.querySelector("ol li:nth-of-type(3) button");
+var pipeOdy = document.querySelector("ol li:nth-of-type(4) button");
 
 pipe64.addEventListener("click", pipe64Animation);
 pipeSun.addEventListener("click", pipeSunAnimation);
@@ -46,6 +46,7 @@ function powerUpOdy() {
 }
 
 
+
 // typewriter effect voor de textboxes
 var speed = 50;
 var i=0;
@@ -60,23 +61,34 @@ function typeWriter64() {
         setTimeout(typeWriter64, speed);
     }
 }
-var l=0;
-var txtBeforeSun = "Dit is de 'Flash Liquidizer Ultra Dousing Device'.";
-var txtSun = "Met dit geweer kun je jezelf boosten ";
-var txtAfterSun = "of schieten op enemies!";
 
-var txtBoxSun = document.querySelector("ol li:nth-of-type(2) nav");
-txtBoxSun.addEventListener("click", typeWriterSun);
-function typeWriterSun() {
-    if (l < txtSun.length) {
-        document.querySelector("ol li:nth-of-type(2) nav").innerHTML += txtSun.charAt(l);
+
+var l=0;
+var txtSun1 = "In deze buis vind je de..";
+var txtBoxSun1 = document.querySelector("ol li:nth-of-type(2) p:first-of-type");
+txtBoxSun1.addEventListener("click", typeWriterSun1);
+
+function typeWriterSun1() {
+    if (l < txtSun1.length) {
+        document.querySelector("ol li:nth-of-type(2) p:first-of-type").innerHTML += txtSun1.charAt(l);
         l++;
-        setTimeout(typeWriterSun, speed);
+        setTimeout(typeWriterSun1, speed);
     }
 }
 
 
+var m=0;
+var txtSun2 = "Flash Liquidizer Ultra Dousing Device";
+var textBoxSun2 = document.querySelector("ol li:nth-of-type(2) p:nth-of-type(2)");
+textBoxSun2.addEventListener("click", typeWriterSun2);
 
+function typeWriterSun2() {
+    if (m < txtSun2.length) {
+        document.querySelector("ol li:nth-of-type(2) p:nth-of-type(2)").innerHTML += txtSun2.charAt(m);
+        m++;
+        setTimeout(typeWriterSun2, speed);
+    }
+}
 
 
 var o=0;
@@ -92,6 +104,7 @@ function typeWriterGal() {
     }
 }
 
+
 var p=0;
 var txtOdy = "Cappy helpt je door te veranderen in het object waar je hem op gooit! Super handig.";
 var txtBoxOdy = document.querySelector("ol li:nth-of-type(4) nav");
@@ -104,3 +117,14 @@ function typeWriterOdy() {
         setTimeout(typeWriterOdy, speed);
     }
 }
+
+
+document.addEventListener('keydown', (e) => {    
+    console.log(e); // all event related info
+    console.log(e.key);
+});
+
+document.addEventListener('keyup', (event)=> {
+    console.log(event); // all event related info
+    console.log(event.key);
+});
