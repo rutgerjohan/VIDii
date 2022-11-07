@@ -1,3 +1,6 @@
+/*************/
+/*   FONTS   */
+/*************/
 @font-face {
 	font-family: mario64;
 	src: url("../fonts/Mario64.ttf");
@@ -19,12 +22,9 @@
 *, *::after, *::before {
   box-sizing:border-box;  
 }
-
 button:not([disabled]) {
   cursor:pointer;
 }
-
-
 
 
 /*********************/
@@ -36,6 +36,19 @@ button:not([disabled]) {
   --color-pipesDark: darkgreen;
 }
 
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+body {
+  background-color: #fff;
+  margin:0;
+  overflow: hidden;
+}
+
+img:hover {
+	cursor: crosshair;
+}
 nav:hover {
 	cursor: pointer;
 }
@@ -43,53 +56,38 @@ div:hover {
 	cursor: help;
 }
 
-
-/********************/
-/* ALGEMENE STYLING */
-/********************/
-body {
-  margin:0;
-  background-color: #fff;
-}
-
 main ol {
   display: flex;
   flex-flow: row nowrap;
-
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 ol li {
+  align-items: flex-end;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   height: 100vh;
-  width: 25vw;
-
-  background-color: #fff;
   justify-content: center;
-  align-items: flex-end;
+  width: 25vw;
 }
 
 
 ol li:first-of-type {
-	display: flex;
-	flex-flow: row wrap;
-
-	color: #fff;
-	font-family: mario64;
-	font-size: 1.5em;
-
 	background-image: url(../assets/scenery64.jpeg);
 	background-size: 25vw 100vh;
+	color: #fff;
+	display: flex;
+	flex-flow: row wrap;
+	font-family: mario64;
+	font-size: 1.5em;
 }
 ol li:first-of-type div:first-of-type {
-  position:relative;
-
+  	position:relative;
 	height:30vh;
 	width:18vw;
-	
 	background-image:
 		linear-gradient(
 			to right,
@@ -100,22 +98,18 @@ ol li:first-of-type div:first-of-type {
 		);
   border-radius:0 0 0 0;
   box-shadow:
-		inset 0 -1.2em .5em -.5em rgb(0 0 0 / .35),
+	inset 0 -1.2em .5em -.5em rgb(0 0 0 / .35),
     inset 0 2em .5em -.5em rgb(0 0 0 / .70);
-
   display:grid;
-	justify-items:center;
+  justify-items:center;
 }
 ol li:first-of-type div:first-of-type::after {
-  content:"";
+	content:"";
 	position:absolute;
-
 	bottom:100%;
 	width: 18vw;
 	height: 8vh;
-	
 	border-radius:0em 0em 0em 0em;
-	
 	background-image:
 		linear-gradient(
 			to right,
@@ -127,34 +121,32 @@ ol li:first-of-type div:first-of-type::after {
 }
 ol li:first-of-type nav {
 	align-self: flex-start;
-	position: relative;
+	background-color: rgb(0 0 0/ .70);
+	height: 21vh;
 	line-height: 1.5em;
 	margin: 3vh 0 0 0;
 	padding: 10px 25px 25px 10px;
-	height: 21vh;
+	position: relative;
 	width: 17vw;
-	background-color: rgb(0 0 0/ .70);
 }
 ol li:first-of-type nav::after {
 	content: "";
-	position: absolute;
-
-	bottom:5%;
-	right: 4%;
-	width: 0;
-	height: 0;
-
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
 	border-top: 15px solid #fff;
+	bottom:5%;
+	height: 0;
+	position: absolute;
+	right: 4%;
+	width: 0;
 }
 ol li:first-of-type img {
+	height: 18vh;
+	left: 4.5vw;
+	margin-top: 0vh;
 	position: absolute;
 	top: 35vh;
-	left: 4.5vw;
 	width: 15vw;
-	height: 18vh;
-	margin-top: 0vh;
 
 	animation-name: powerDown;
 	animation-duration: 1s;
@@ -168,23 +160,19 @@ ol li:first-of-type img.uitDeBuis {
 
 
 ol li:nth-of-type(2) {
-	display: flex;
-	flex-flow: row wrap;
-
-	color: #fff;
-	font-family: marioSunshine;
-	font-size: 1.2em;
-
 	background-image: url("../assets/scenerySun.jpg");
 	background-size: 25vw 100vh;
+	color: #fff;
+	display: flex;
+	flex-flow: row wrap;
+	font-family: marioSunshine;
+	font-size: 1.2em;
 }
 ol li:nth-of-type(2) div:first-of-type {
   position:relative;
-  
   height:31vh;
   width:18vw;
-	
-	background-image:
+  background-image:
 		linear-gradient(
 			to right,
 			var(--color-pipesDark),
@@ -195,20 +183,17 @@ ol li:nth-of-type(2) div:first-of-type {
   border-radius:0 0 0 0;
   box-shadow:
 		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
-
   display:grid;
   justify-items:center;
 }
 ol li:nth-of-type(2) div:first-of-type::after {
 	content:"";
-	position:absolute;
 
-	bottom:100%;
-	width: 20vw;
-	height: 8vh;
-	
 	border-radius:.8em .8em 0em 0em;
-	
+	bottom:100%;
+	height: 8vh;
+	position:absolute;
+	width: 20vw;
 	background-image:
 		linear-gradient(
 			to right,
@@ -217,57 +202,49 @@ ol li:nth-of-type(2) div:first-of-type::after {
 			var(--color-pipesMedium) 33%,
 			var(--color-pipesLight)
 		);
-	
 		box-shadow:
 			inset 0 -.80em .5em -.75em rgb(0 0 0 / .80),
 			inset 0 1.55em 0em -.75em rgb(255 255 255 / .45);
 }
 ol li:nth-of-type(2) nav {
 	align-self: flex-start;
-	position: relative;
-
+	background-color: rgb(0 0 190/ .80);
 	border-radius: 25px;
+	height: 4vh;
 	margin: 11vh 0 3vh 0;
 	padding: 0px 0px;
-	
-	height: 4vh;
+	position: relative;
 	width: 17vw;
-
-	background-color: rgb(0 0 190/ .80);
 }
 ol li:nth-of-type(2) nav::before {
 	content: "Oh no! The villagers are ";
-	position:absolute;
-	bottom:120%;
-
-	border-radius: 25px;
-	height: 4vh;
-	width: 17vw;
-
-	text-align: center;
 
 	background-color: rgb(0 0 190/ .80);
+	border-radius: 25px;
+	bottom:120%;
+	height: 4vh;
+	position:absolute;
+	text-align: center;
+	width: 17vw;
 }
 ol li:nth-of-type(2) nav::after {
 	content: "they will fucking die!";
-	position:absolute;
-	top:120%;
-
-	border-radius: 25px;
-	height: 4vh;
-	width: 17vw;
-
-	text-align: center;
 
 	background-color: rgb(0 0 190/ .80);
+	border-radius: 25px;
+	height: 4vh;
+	position:absolute;
+	text-align: center;
+	top:120%;
+	width: 17vw;
 }
 ol li:nth-of-type(2) img {
+	height: 28vh;
+	left: 32vw;
+	margin-top: 0vh;
 	position: absolute;
 	top: 30vh;
-	left: 32vw;
 	width: 10vw;
-	height: 28vh;
-	margin-top: 0vh;
 
 	animation-name: powerDown;
 	animation-duration: 1s;
@@ -281,23 +258,19 @@ ol li:nth-of-type(2) img.uitDeBuis {
 
 
 ol li:nth-of-type(3) {
-	display: flex;
-	flex-flow: row wrap;
-
-	color: #000;
-	font-family: marioSunshine;
-	font-size: 1.25em;
-
 	background-image: url("../assets/sceneryGal.jpg");
 	background-size: 25vw 100vh;
+	color: #000;
+	display: flex;
+	flex-flow: row wrap;
+	font-family: marioSunshine;
+	font-size: 1.25em;
 }
 ol li:nth-of-type(3) div:first-of-type {
+  height:30vh;
   position:relative;
-
-	height:30vh;
-	width:14vw;
-	
-	background-image:
+  width:14vw;
+  background-image:
 		linear-gradient(
 			to right,
 			var(--color-pipesDark),
@@ -310,21 +283,18 @@ ol li:nth-of-type(3) div:first-of-type {
   box-shadow:
 		inset 0 1em 1em -1em rgb(0 0 0 / .5),
 		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
-
   display:grid;
-	justify-items:center;
+  justify-items:center;
 }
 ol li:nth-of-type(3) div:first-of-type::after {
   content:"";
-	position:absolute;
-
-	bottom:100%;
-	width: 16vw;
-	height: 8vh;
-	
-	border-radius:.5em;
-	
-	background-image:
+  
+  position:absolute;
+  bottom:100%;
+  width: 16vw;
+  height: 8vh;
+  border-radius:.5em;
+  background-image:
 		linear-gradient(
 			to right,
 			var(--color-pipesDark),
@@ -333,54 +303,46 @@ ol li:nth-of-type(3) div:first-of-type::after {
       var(--color-pipesLight) 60%,
 			var(--color-pipesDark)
 		);
-	
-		box-shadow:
-			inset 0 -.5em .5em -.5em rgb(0 0 0 / .75),
-			inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
+	box-shadow:
+		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75),
+		inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
 }
 ol li:nth-of-type(3) nav {
 	align-self: flex-start;
-	position: relative;
-
+	background-color: #fff;
+	border-radius: 30px;
+	border: 4px solid gray;
+	box-shadow: 8px 8px 2px 0px rgb(0 0 0 / .35);
+	height: 12vh;
 	line-height: 1.25em;
-
 	margin: 6.5vh 0 3vh 0;
 	padding: .25em 3.5em .5em .75em;
-
-	height: 12vh;
+	position: relative;
 	width: 20vw;
-
-	box-shadow: 8px 8px 2px 0px rgb(0 0 0 / .35);
-	background-color: #fff;
-	border: 4px solid gray;
-	border-radius: 30px;
 }
 ol li:nth-of-type(3) nav::after {
 	content: "A";
-	position: absolute;
-
-	bottom: 10%;
-	right: 5%;
-
-	height: 2.25em;
-	width: 2.25em;
-
-	padding: 0 auto;
-	text-align: center;
-	line-height: 2em;
-
+	
 	border: 2px solid #000;
+	bottom: 10%;
 	box-shadow:
 		inset 4px 4px 2px 0px rgb(0 0 0 / .25);
 	border-radius: 10em;
+	height: 2.25em;
+	line-height: 2em;
+	padding: 0 auto;
+	position: absolute;
+	right: 5%;
+	text-align: center;
+	width: 2.25em;
 }
 ol li:nth-of-type(3) img {
+	height: 23vh;
+	left: 56vw;
+	margin-top: 0vh;
 	position: absolute;
 	top: 35vh;
-	left: 56vw;
 	width: 12vw;
-	height: 23vh;
-	margin-top: 0vh;
 
 	animation-name: powerDown;
 	animation-duration: 1s;
@@ -394,21 +356,18 @@ ol li:nth-of-type(3) img.uitDeBuis {
 
 
 ol li:nth-of-type(4) {
-	display: flex;
-	flex-flow: row wrap;
-
-	color: #fff;
-	font-family: marioOdyssey;
-	font-size: 1.1em;
-
 	background-image: url(../assets/sceneryOdy.jpg);
 	background-size: 25vw 100vh;
+	color: #fff;
+	display: flex;
+	flex-flow: row wrap;
+	font-family: marioOdyssey;
+	font-size: 1.1em;
 }
 ol li:nth-of-type(4) div:first-of-type {
   position: relative;
   height:29vh;
-	width:14vw;
-
+  width:14vw;
   background-image:
 		linear-gradient(
 			to right,
@@ -417,27 +376,21 @@ ol li:nth-of-type(4) div:first-of-type {
 			var(--color-pipesLight) 33%,
 			var(--color-pipesDark)
 		);
-	
 	border-radius:0 0 .5em .5em;
-	
 	box-shadow:
 		inset 0 1em 1em -1em rgb(0 0 0 / .5),
 		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
-	
 	display:grid;
 	justify-items:center;
 }
 ol li:nth-of-type(4) div:first-of-type::after {
   content:"";
-	position:absolute;
-
+  border-radius:.5em;
   bottom:100%;
-	width: 16vw;
-	height: 9vh;
-	
-	border-radius:.5em;
-	
-	background-image:
+  height: 9vh;
+  position:absolute;
+  width: 16vw;
+  background-image:
 		linear-gradient(
 			to right,
 			var(--color-pipesLight),
@@ -445,52 +398,45 @@ ol li:nth-of-type(4) div:first-of-type::after {
 			var(--color-pipesLight) 33%,
 			var(--color-pipesDark)
 		);
-	
-		box-shadow:
-			inset 0 -.5em .5em -.5em rgb(0 0 0 / .75),
-			inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
+	box-shadow:
+		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75),
+		inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
 }
 ol li:nth-of-type(4) nav {
 	align-self: flex-start;
-	position: relative;
-
-	line-height: 1.5em;
-
-	margin: 6.5vh 0 3vh 0;
-	padding: .5em 5em .25em .5em;
-
-	height: 13vh;
-	width: 22vw;
 	background-color: rgb(255 255 255 / .25);
 	border-radius: 20px;
+	height: 13vh;
+	line-height: 1.5em;
+	margin: 6.5vh 0 3vh 0;
+	padding: .5em 5em .25em .5em;
+	position: relative;
 	text-shadow: 2px 2px #000;
+	width: 22vw;
 }
 ol li:nth-of-type(4) nav::after {
 	content: "A";
-	position: absolute;
 
-	color: rgb(255 255 255 / .8)	;
 	background-color: #000;
-	bottom: 20%;
-	right: 8%;
-
-	height: 2.25em;
-	width: 2.25em;
-
-	padding: 0 auto;
-	text-align: center;
-	line-height: 2;
-
-	border: 2px solid #000;
 	border-radius: 10em;
+	border: 2px solid #000;
+	bottom: 20%;
+	color: rgb(255 255 255 / .8);
+	height: 2.25em;
+	line-height: 2;
+	padding: 0 auto;
+	position: absolute;
+	right: 8%;
+	text-align: center;
+	width: 2.25em;
 }
 ol li:nth-of-type(4) img {
+	height: 15vh;
+	left: 81.5vw;
+	margin-bottom: 8vh;
 	position: absolute;
 	top: 35vh;
-	left: 81.5vw;
 	width: 12vw;
-	height: 15vh;
-	margin-bottom: 8vh;
 
 	animation-name: powerDown;
 	animation-duration: 1s;
@@ -500,6 +446,44 @@ ol li:nth-of-type(4) img {
 }
 ol li:nth-of-type(4) img.uitDeBuis {
 	animation-play-state: running;
+}
+
+
+/********************/
+/*     CLASSES      */
+/********************/
+.pipe {
+	animation-name: pipeStretch;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-play-state: paused;
+}
+.pipe.playAnimation {
+	animation-play-state: running;
+}
+
+
+/********************/
+/*    ANIMATIES     */
+/********************/
+@keyframes pipeStretch {
+  0%, 20% {
+    transform:none;
+  }
+  16% {
+    transform:scale(.9, 1.1); 
+  }
+  28% {
+    transform:scale(1, 1); 
+  }
+  34% {
+    transform:scale(.65, 1.25);
+    animation-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  }
+  45%, 100% {
+    transform:none;
+  }
 }
 @keyframes powerDown {
 	0% {
@@ -525,38 +509,10 @@ ol li:nth-of-type(4) img.uitDeBuis {
 }
 
 
-
-
-.pipe {
-	animation-name: pipeStretch;
-	animation-duration: 3s;
-	animation-iteration-count: 1;
-	animation-timing-function: ease;
-	animation-play-state: paused;
-}
-.pipe.playAnimation {
-	animation-play-state: running;
-}
-@keyframes pipeStretch {
-  0%, 20% {
-    transform:none;
-  }
-  16% {
-    transform:scale(.9, 1.1); 
-  }
-  28% {
-    transform:scale(1, 1); 
-  }
-  34% {
-    transform:scale(.65, 1.25);
-    animation-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
-  }
-  45%, 100% {
-    transform:none;
-  }
-}
-
 @media only screen and (max-width: 800px) {
+	body {
+		overflow:visible;
+	}
 	main ol {
 		display: flex;
 		flex-flow: row wrap;

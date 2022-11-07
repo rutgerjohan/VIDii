@@ -60,6 +60,24 @@ function typeWriter64() {
         setTimeout(typeWriter64, speed);
     }
 }
+var l=0;
+var txtBeforeSun = "Dit is de 'Flash Liquidizer Ultra Dousing Device'.";
+var txtSun = "Met dit geweer kun je jezelf boosten ";
+var txtAfterSun = "of schieten op enemies!";
+
+var txtBoxSun = document.querySelector("ol li:nth-of-type(2) nav");
+txtBoxSun.addEventListener("click", typeWriterSun);
+function typeWriterSun() {
+    if (l < txtSun.length) {
+        document.querySelector("ol li:nth-of-type(2) nav").innerHTML += txtSun.charAt(l);
+        l++;
+        setTimeout(typeWriterSun, speed);
+    }
+}
+
+
+
+
 
 var o=0;
 var txtGal = "Met deze ster kan je de hele wereld aan! Luma helpt jou met behalen van sterren!";
