@@ -33,8 +33,8 @@ Rood
   Aan deze technieken/punten wil ik werken:
   - Ik wil CSS kunnen toepassen op een creatieve manier in plaats van alleen het kunnen maken van een website wat ik al redelijk goed kan.
   - Daarnaast wil ik mijn vaardigheden met JavaScript verbeteren. Ik weet nog niet heel veel van JS af en het lijkt mij leuk om te leren hoe ik dit kan combineren met HTML en CSS.
-  - 
- 
+  - Omdat het gebruik van divs, navs, classes en id's niet toegestaan wil ik me meer gaan verdiepen in hoe ik mijn html en css zo efficient mogelijk in elkaar kan zetten.
+
 </details>
 
 
@@ -173,10 +173,9 @@ Rood
 
 
 
-
 ## Reflectie
-
 <details>
+
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
@@ -193,20 +192,49 @@ Rood
   Korte omschrijving met plaatje(s)
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+
 </details>
 
 
 
-
 ## Bronnenlijst
-
 <details open>
-<summary>continu bijhouden terwijl je werkt</summary>
 
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
+  <summary>continu bijhouden terwijl je werkt</summary>
+  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+  ### Images
+  1. Image voor Mario 64 powerup
+  https://www.mariowiki.com/Wing_Cap
+
+  2. Image voor Mario Sunshine powerup
+  https://www.mariowiki.com/F.L.U.D.D. 
+
+  3. Image voor Mario Galaxy powerup
+  https://mario.fandom.com/wiki/Luma_(character) 
+
+  4. Image voor Mario Odyssey powerup
+  https://comicbook.com/gaming/news/cappy-kills-mario-super-mario-odyssey-nintendo-switch/ 
+
+
+  ### Background Images
+  5. Background-image voor Mario 64
+  https://www.gameinformer.com/b/features/archive/2011/10/15/replay-mario-64.aspx
+
+  6. Background-image voor Mario Sunshine
+  https://www.reddit.com/r/supermariosunshine/comments/im0n9i/looks_like_this_gelato_beach_background_is/
+
+  7. 'Background-image voor Mario Galaxy'
+  https://www.mariowiki.com/Mario_Galaxy_(stage)
+
+  8. 'Background-image voor Mario Odyssey'
+  https://www.vg247.com/dropping-mario-into-a-normal-environment-like-new-donk-city-in-super-mario-odyssey-had-miyamoto-worried
+
+
+  ### Gebruikte bronnen voor code (die ik wel zelf snap)
+  9. typewriter effect voor de textboxes
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter 
+  10. codepen die Sanne heeft gemaakt, heb ik toegepast op alle buizen
+  https://codepen.io/rutgerjohan/pen/oNyxgyE 
 
 </details>
