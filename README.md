@@ -26,14 +26,14 @@ Rood
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/eersteSchetsConcept.jpg" width="375px" alt="eerste versie/schets">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - CSS op een creatieve manier toepassen in plaats van het standaard website  gebruik dat ik al ken.
-  - Mijn vaardigheden met JavaScript, waar ik nog niet heel veel van weet uitbreiden en deze kunnen combineren met HTML en CSS.
-  - nog een punt
+  - Ik wil CSS kunnen toepassen op een creatieve manier in plaats van alleen het kunnen maken van een website wat ik al redelijk goed kan.
+  - Daarnaast wil ik mijn vaardigheden met JavaScript verbeteren. Ik weet nog niet heel veel van JS af en het lijkt mij leuk om te leren hoe ik dit kan combineren met HTML en CSS.
+  - 
  
 </details>
 
@@ -69,20 +69,19 @@ Rood
 
 
   ### Bevinding 4:
-  jbpiycuo;luodoyf
+  Om wat meer interactie te hebben kan je nog een soort game maken waarbij je bijvoorbeeld iemand (een prinses) moet redden...
 
   #### oplossing:
-  outcucltxxdtcuocl
+  Om uiteindelijk een minder statisch beeld te krijgen en meer interactie te creeëren voor de gebruiker ga ik misschien de powerups uit de buis laten komen in combinatie met een interactie. Bijvoorbeeld een click of hover.
 
 
   ### Bevinding 5:
-  jbpiycuo;luodoyf
+  Voor verdere 'Easter eggs' kan je ook andere Mario personages toevoegen zoals Joshi of meerdere blokken die klikbaar zijn.
 
   #### oplossing:
-  icipcpypf7dpf
+  Ik heb gekeken naar meerdere soorten easter eggs om toe te voegen maar ik vind het moeilijk om nog veel andere elementen toe te voegen op de pagina omdat ik bang ben dat alle 4 de delen van het scherm dan echt veel te vol komen te zitten.
 
 </details>
-
 
 
 
@@ -131,11 +130,12 @@ Rood
 
 
 
-
 ## Voortgang/Feedback 3
 
 <details>
-  <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
+  <summary>
+    Bevindingen uit het derde feedbackmoment. Feedbacksessie is uitgevoerd...
+  </summary>
   
   ### Bevinding 1:
 
@@ -183,7 +183,7 @@ Rood
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
 
 
-  ### Dit ging goed/Heb ik geleerd: 
+  ### Dit ging goed/Heb ik geleerd:
   Korte omschrijving met plaatje(s)
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
