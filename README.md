@@ -1,14 +1,3 @@
-# Procesverslag
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
-
-
-
 ## Jij
 
 ### Ontwerper:
@@ -37,8 +26,6 @@ Rood
   - Omdat het gebruik van divs, navs, classes en id's niet toegestaan wil ik me meer gaan verdiepen in hoe ik mijn html en css zo efficient mogelijk in elkaar kan zetten.
 
 </details>
-
-
 
 
 ## Voortgang/Feedback 1
@@ -160,16 +147,17 @@ Rood
 
 
   ### Bevinding 4:
-  
+  Het is lastig/ eigenlijk niet goed te zien wat klikbaar is en wat niet. Probeer misschien stated te gebruiken om de verschillende mogelijkheden van interacties op je pagina duidelijk te communiceren met de gebruiker.
 
   #### oplossing:
-  
+  Ik was het hiermee eens, het is inderdaad niet goed te zien dat bijvoorbeeld de buizen klikbaar zijn. Mijn oplossing hiervoor was dat ik een hover en een focus state heb toegevoegd waarbij je door meerdere kleine animaties kunt zien dat er een interactie mogelijk is. Ik heb bijvoorbeeld een grotere shadow op de eerste en de gradient die van kleur verandert bij de andere.
 
 
   ### Bevinding 5:
-  
+  Geef duidelijk aan wat je concept is, het is aan het begin niet helemaal duidelijk waar de tijdlijn over gaat.
 
   #### oplossing:
+  Ik denk zelf niet dat dit zo'n groot probleem is omdat het naar mijn mening best duidelijk te zien is aan de buizen en algemene kwaliteit van de background images dat het gaat over de evaluatie van de mario games over de tijd heen.
 
 </details>
 
@@ -181,7 +169,7 @@ Rood
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/laatsteUitwerking.jpg" width="375px" alt="final ontwerp">
+  <img src="readme-images/laatsteUitwerking.jpg" alt="final ontwerp">
 
 
   ### Dit ging goed/Heb ik geleerd:
@@ -190,7 +178,7 @@ Rood
   Naast dit soort praktische dingen heb ik ook veel geleerd over mogelijkheden binnen CSS. Het gebruiken van custon properties had mij in het verleden veel moeite kunnen besparen en neem ik zeker mee. Ook snap ik nu hoe ik darkmode makkelijk kan toevoegen aan een website en hoe ik makkelijk animaties kan maken met keyframes.
 
   Wat JavaScript betreft heb ik echt heel veel vooruitgang gemaakt. Ik was al een beetje bekend met de structuur van de taal maar wat je nou precies kon doen wist ik nog niet. Ik hem inmiddels geleerd hoe ik onclick events kan maken en hoe ik door middel van if statements en counters ook animaties kan maken binnen JS.
-  <img src="readme-images/clickEventJS" width="375px" alt="top">
+  <img src="readme-images/clickEventJS.jpg" alt="top">
   Wat er eigenlijk gebeurt is dat er een op een click op de pagina een functie zich afspeelt. In de fucntie zit een if statement die alleen aanslaat wanneer de target een IMG is. Wanneer dat gebeurt geef je deze 'target' een class mee. Vervolgens kan je in deze class in CSS de animatie laten afspelen.
 
 
@@ -244,5 +232,12 @@ Rood
   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter 
   10. codepen die Sanne heeft gemaakt, heb ik toegepast op alle buizen en wel zelf ook verandert
   https://codepen.io/rutgerjohan/pen/oNyxgyE 
+
+  ### Sounds
+  11. Mario galaxy sound effect
+  https://www.youtube.com/watch?v=VyPy3ALUwss
+
+  12. Mario odyssey sound effect
+  https://www.youtube.com/watch?v=0LU7WwPVU50 
 
 </details>

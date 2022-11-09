@@ -162,16 +162,20 @@ document.addEventListener('click', (event) => {
 
 // });
 
+var sound64 = new Audio("assets/mario64Sound.mp3");
+var soundGal = new Audio("assets/marioGalSound.mp3")
+var soundOdy = new Audio("assets/marioOdySound.mp3");
+
 document.addEventListener('keyup', (event) => {
     var name = event.key;
     if (name === 'ArrowDown') {
         document.getElementById('imageJumpScare').classList.toggle('jumpscare');
-        console.log('biwvwufowp');
+        sound64.play();
     }
     if (name === 'a') {
-        alert('A is pressed');
+        soundGal.play();
     }
     if (name === 'b') {
-        alert('B is pressed');
+        soundOdy.play();
     }
 });
