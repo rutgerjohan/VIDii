@@ -46,6 +46,24 @@ body {
   overflow: hidden;
 }
 
+#imageJumpScare {
+	visibility: visible;
+	position: absolute;
+	top:0vh;
+	left: 0vw;
+	width: 0vw;
+	height: 0vh;
+
+	animation: boe;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-play-state: paused;
+}
+#imageJumpScare.jumpscare {
+	animation-play-state: running;
+}
+
 img:hover {
 	cursor: crosshair;
 }
@@ -83,6 +101,7 @@ ol li:first-of-type {
 	flex-flow: row wrap;
 	font-family: mario64;
 	font-size: 1.5em;
+	position: relative;
 }
 ol li:first-of-type button {
 	border: none;
@@ -145,13 +164,14 @@ ol li:first-of-type p::after {
 }
 ol li:first-of-type img {
 	height: 18vh;
-	left: 4.5vw;
 	margin-top: 0vh;
 	position: absolute;
 	top: 35vh;
 	width: 15vw;
-
+	object-fit: contain;
+	min-width: 7em;
 	animation-name: powerDown;
+
 	animation-duration: 1s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
@@ -240,11 +260,12 @@ ol li:nth-of-type(2) p:nth-of-type(2) {
 }
 ol li:nth-of-type(2) img {
 	height: 28vh;
-	left: 32vw;
+	top: 30vh;
 	margin-top: 0vh;
 	position: absolute;
-	top: 30vh;
 	width: 10vw;
+	min-width: 7em;
+	object-fit: contain;
 
 	animation-name: powerDown;
 	animation-duration: 1s;
@@ -314,13 +335,13 @@ ol li:nth-of-type(3) p {
 	border-radius: 30px;
 	border: 4px solid gray;
 	box-shadow: 8px 8px 2px 0px rgb(0 0 0 / .35);
-	height: 12vh;
+	height: auto;
+	min-height: 10vh;
 	line-height: 1.25em;
 	margin: 6.5vh 0 3vh 0;
 	padding: .25em 3.5em .5em .75em;
 	position: relative;
 	width: 20vw;
-	min-height: 3em;
 }
 ol li:nth-of-type(3) p::after {
 	content: "A";
@@ -340,11 +361,12 @@ ol li:nth-of-type(3) p::after {
 }
 ol li:nth-of-type(3) img {
 	height: 23vh;
-	left: 56vw;
 	margin-top: 0vh;
 	position: absolute;
 	top: 35vh;
 	width: 12vw;
+	min-width: 7em;
+	object-fit: contain;
 
 	animation-name: powerDown;
 	animation-duration: 1s;
@@ -409,17 +431,17 @@ ol li:nth-of-type(4) p {
 	align-self: flex-start;
 	background-color: rgb(255 255 255 / .25);
 	border-radius: 20px;
-	height: 13vh;
+	height: auto;
+	min-height: 10vh;
 	line-height: 1.5em;
 	margin: 6.5vh 0 3vh 0;
 	padding: .5em 5em .25em .5em;
 	position: relative;
 	text-shadow: 2px 2px #000;
 	width: 22vw;
-	min-height: 3em;
 }
 ol li:nth-of-type(4) p::after {
-	content: "A";
+	content: "B";
 
 	background-color: #000;
 	border-radius: 10em;
@@ -436,11 +458,12 @@ ol li:nth-of-type(4) p::after {
 }
 ol li:nth-of-type(4) img {
 	height: 15vh;
-	left: 81.5vw;
 	margin-bottom: 8vh;
 	position: absolute;
 	top: 35vh;
 	width: 12vw;
+	min-width: 7em;
+	object-fit: contain;
 
 	animation-name: powerDown;
 	animation-duration: 1s;
@@ -468,14 +491,14 @@ main ol li:first-of-type img.zweven, main ol li:nth-of-type(2) img.zweven, main 
 	animation-play-state: running;
 }
 
-.pipe {
+ol li button {
 	animation-name: pipeStretch;
 	animation-duration: 3s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
 	animation-play-state: paused;
 }
-.pipe.playAnimation {
+ol li button.playAnimation {
 	animation-play-state: running;
 }
 
@@ -535,7 +558,21 @@ main ol li:first-of-type img.zweven, main ol li:nth-of-type(2) img.zweven, main 
 		transform: translatey(0px);
 	}
 }
+@keyframes boe {
+	0% {
+		visibility: visible;
+	}
+	100% {
+		transform: rotate(360deg);
+		height: 100vh;
+		width: 100vw;
+	}
+}
 
+
+/********************/
+/*  MEDIA QUERIES   */
+/********************/
 @media only screen and (max-width: 800px) {
 	body {
 		overflow:visible;
@@ -550,24 +587,21 @@ main ol li:first-of-type img.zweven, main ol li:nth-of-type(2) img.zweven, main 
 	main ol li {
 		display: flex;
 		flex-flow: row wrap;
-
 		color: #fff;
-
 		height: 100vh;
 		width: 100vw;
-
 		justify-content: center;
   		align-items: flex-end;
 	}
 	ol li:first-of-type {
 		background-size: 100vw 100vh;
-
 		display: flex;
 		flex-flow: row wrap;
 	}
-	ol li:first-of-type div:first-of-type {
+
+	ol li:first-of-type button {
 		position:relative;
-		height:45vh;
+		height:35vh;
 		width:50vw;
 		background-image:
 			linear-gradient(
@@ -582,7 +616,168 @@ main ol li:first-of-type img.zweven, main ol li:nth-of-type(2) img.zweven, main 
 			inset 0 -1.2em .5em -.5em rgb(0 0 0 / .35),
     		inset 0 2em .5em -.5em rgb(0 0 0 / .70);
 	}
+	ol li:first-of-type button::after {
+		content:"";
+		position:absolute;
+		bottom:100%;
+		width: 50vw;
+		height: 12vh;
+		border-radius:0em 0em 0em 0em;
+		background-image:
+			linear-gradient(
+				to right,
+				var(--color-pipesMedium) 28%,
+				var(--color-pipesLight) 20%,
+		  var(--color-pipesLight) 70%,
+				var(--color-pipesDark) 66%
+			);
+	}
+	ol li:nth-of-type(2) button {
+		position:relative;
+		height:35vh;
+		width:50vw;
+		background-image:
+			linear-gradient(
+				to right,
+				var(--color-pipesDark),
+				var(--color-pipesMedium),
+				var(--color-pipesMedium) 33%,
+				var(--color-pipesLight)
+			);
+		border-radius:0 0 0 0;
+		box-shadow:
+			inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
+	}
+	ol li:nth-of-type(2) button::after {
+		content:"";
+	
+		border-radius:.8em .8em 0em 0em;
+		bottom:100%;
+		height: 12vh;
+		width: 55vw;
+		position:absolute;
+		background-image:
+			linear-gradient(
+				to right,
+				var(--color-pipesDark),
+				var(--color-pipesMedium),
+				var(--color-pipesMedium) 33%,
+				var(--color-pipesLight)
+			);
+			box-shadow:
+				inset 0 -.80em .5em -.75em rgb(0 0 0 / .80),
+				inset 0 1.55em 0em -.75em rgb(255 255 255 / .45);
+	}
+	ol li:nth-of-type(3) button {
+		position:relative;
+		height: 35vh;
+		width:50vw;
+		background-image:
+			linear-gradient(
+				to right,
+				var(--color-pipesDark),
+				var(--color-pipesLight),
+				var(--color-pipesDark) 34%,
+		  var(--color-pipesLight) 60%,
+				var(--color-pipesDark)
+			);
+		border-radius:0 0 .5em .5em;
+		box-shadow:
+			inset 0 1em 1em -1em rgb(0 0 0 / .5),
+			inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
+	}
+	ol li:nth-of-type(3) button::after {
+	  content:"";
+	  
+	  position:absolute;
+	  bottom:100%;
+	  width: 55vw;
+	  height: 12vh;
+	  border-radius:.5em;
+	  background-image:
+			linear-gradient(
+				to right,
+				var(--color-pipesDark),
+				var(--color-pipesLight),
+				var(--color-pipesDark) 34%,
+		  var(--color-pipesLight) 60%,
+				var(--color-pipesDark)
+			);
+		box-shadow:
+			inset 0 -.5em .5em -.5em rgb(0 0 0 / .75),
+			inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
+	}
+	ol li:nth-of-type(4) button {
+		position: relative;
+		height:35vh;
+		width:50vw;
+		background-image:
+			linear-gradient(
+				to right,
+				var(--color-pipesLight),
+				#fff,
+				var(--color-pipesLight) 33%,
+				var(--color-pipesDark)
+			);
+		border-radius:0 0 .5em .5em;
+		box-shadow:
+			inset 0 1em 1em -1em rgb(0 0 0 / .5),
+			inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
+	}
+	ol li:nth-of-type(4) button::after {
+	  content:"";
+	  border-radius:.5em;
+	  bottom:100%;
+	  height: 12vh;
+	  width: 55vw;
+	  position:absolute;
+	  background-image:
+			linear-gradient(
+				to right,
+				var(--color-pipesLight),
+				#fff,
+				var(--color-pipesLight) 33%,
+				var(--color-pipesDark)
+			);
+		box-shadow:
+			inset 0 -.5em .5em -.5em rgb(0 0 0 / .75),
+			inset 0 .5em .5em -.5em rgb(255 255 255 / .75);
+	}
 
+
+	ol li:first-of-type p {
+		width: 65vw;
+	}
+	ol li:nth-of-type(2) p:first-of-type {
+		width: 65vw;
+	}
+	ol li:nth-of-type(2) p:last-of-type {
+		width: 65vw;
+		margin: -15.5vh 0 0 0;
+	}
+	ol li:nth-of-type(3) p {
+		width: 65vw;
+	}
+	ol li:nth-of-type(4) p {
+		width: 65vw;
+	}
+
+	ol li:first-of-type img {
+		min-width: 12em;
+		top: 25vh;
+	}
+	ol li:nth-of-type(2) img {
+		min-width: 12em;
+		top: 130vh;
+	}
+	ol li:nth-of-type(3) img {
+		top: 225vh;
+		min-width: 12em;
+	}
+	ol li:nth-of-type(4) img {
+		min-width: 12em;
+		top: 325vh;
+	}
 
 	ol li:nth-of-type(2) {
 		background-size: 100vw 100vh;
@@ -593,4 +788,127 @@ main ol li:first-of-type img.zweven, main ol li:nth-of-type(2) img.zweven, main 
 	ol li:nth-of-type(4) {
 		background-size: 100vw 100vh;
 	}
-  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1350px) {
+	body {
+		overflow:visible;
+	}
+	main ol {
+		overflow-x: hidden;
+		display: flex;
+		flex-flow: row wrap;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100vw;
+	}
+	main ol li {
+		display: flex;
+		flex-flow: row wrap;
+		color: #fff;
+		height: 100vh;
+		width: 49.3vw;
+		justify-content: center;
+  		align-items: flex-end;
+	}
+	ol li:first-of-type {
+		background-size: 50vw 100vh;
+	}
+	ol li:nth-of-type(2) {
+		background-size: 50vw 100vh;
+	}
+	ol li:nth-of-type(3) {
+		background-size: 50vw 100vh;
+	}
+	ol li:nth-of-type(4) {
+		background-size: 50vw 100vh;
+	}
+
+	ol li:first-of-type p {
+		width: 40vw;
+	}
+	ol li:nth-of-type(2) p:first-of-type {
+		width: 40vw;
+	}
+	ol li:nth-of-type(2) p:last-of-type {
+		width: 40vw;
+		margin: -15.5vh 0 0 0;
+	}
+	ol li:nth-of-type(3) p {
+		width: 40vw;
+	}
+	ol li:nth-of-type(4) p {
+		width: 40vw;
+	}
+
+	ol li:first-of-type button {
+		position:relative;
+		height:30vh;
+		width:25vw;
+	}
+	ol li:first-of-type button::after {
+		content:"";
+		position:absolute;
+		bottom:100%;
+		width: 25vw;
+		height: 10vh;
+	}
+	ol li:nth-of-type(2) button {
+		position:relative;
+		height:30vh;
+		width:25vw;
+	}
+	ol li:nth-of-type(2) button::after {
+		content:"";
+	
+		border-radius:.8em .8em 0em 0em;
+		bottom:100%;
+		height: 10vh;
+		width: 30vw;
+		position:absolute;
+	}
+	ol li:nth-of-type(3) button {
+		position:relative;
+		height: 30vh;
+		width:25vw;
+	}
+	ol li:nth-of-type(3) button::after {
+	  content:"";
+	  
+	  position:absolute;
+	  bottom:100%;
+	  width: 30vw;
+	  height: 10vh;
+	}
+	ol li:nth-of-type(4) button {
+		position: relative;
+		height:30vh;
+		width:25vw;
+	}
+	ol li:nth-of-type(4) button::after {
+	  content:"";
+	  border-radius:.5em;
+	  bottom:100%;
+	  height: 10vh;
+	  width: 30vw;
+
+	}
+
+	ol li:first-of-type img {
+		min-width: 12em;
+		top: 30vh;
+	}
+	ol li:nth-of-type(2) img {
+		min-width: 12em;
+		top: 30vh;
+	}
+	ol li:nth-of-type(3) img {
+		top: 135vh;
+		min-width: 12em;
+	}
+	ol li:nth-of-type(4) img {
+		min-width: 12em;
+		top: 135vh;
+	}
+}

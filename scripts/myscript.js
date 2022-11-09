@@ -151,3 +151,27 @@ document.addEventListener('click', (event) => {
 // function zwevenOdy() {
 //     imageOdy.classList.add("zweven");
 // }
+
+
+// document.addEventListener('keyDown', (event) => {
+
+//     var name = event.key;
+//     if (name === 'Control') {
+//         alert("firwboewibw");
+//     }
+
+// });
+
+document.addEventListener('keyup', (event) => {
+    var name = event.key;
+    if (name === 'ArrowDown') {
+        document.getElementById('imageJumpScare').classList.toggle('jumpscare');
+        console.log('biwvwufowp');
+    }
+    if (name === 'a') {
+        alert('A is pressed');
+    }
+    if (name === 'b') {
+        alert('B is pressed');
+    }
+});

@@ -23,10 +23,11 @@ Rood
 # Je plan
 
 <details open>
-  <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
+  <summary>De eerste versie/schets van mijn ontwerp & mijn persoonlijke uitdagingen</summary>
 
   ### De eerste versie/schets:
   <img src="readme-images/eersteSchetsConcept.jpg" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/ConceptOmschrijving.jpg" width="375px" alt="Omschrijving/Research voor eerste concept en onderwerp">
 
 
   ### Je ambitie: 
@@ -134,13 +135,14 @@ Rood
 
 <details>
   <summary>
-    Bevindingen uit het derde feedbackmoment. Feedbacksessie is uitgevoerd...
+    Bevindingen uit het derde feedbackmoment. Feedbacksessie is uitgevoerd op 9 novembeer 2022 met Emy.
   </summary>
   
   ### Bevinding 1:
-
+  Op het moment gebruik je een class voor de animatie omdat dit korter is om aan te geven in css. Je kan dit vermijden door een langere selector te gebruiken.
 
   #### oplossing:
+  Ik heb de class weggehaald en in de plaats een de selector 'ol li button' gebruikt. Dit is veel minder lang dan ik had verwacht omdat ik dacht dat alle buttons los benoemd moesten worden terwijl je dit gewoon op een algemene manier kan benoemen.
 
 
   ### Bevinding 2:
@@ -179,19 +181,25 @@ Rood
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
+  <img src="readme-images/laatsteUitwerking.jpg" width="375px" alt="final ontwerp">
 
 
   ### Dit ging goed/Heb ik geleerd:
-  Korte omschrijving met plaatje(s)
+  Als ik terugkijk naar mijn leerdoelen aan het begin van het vak dan denk ik dat ik wel veel voortgang heb gemaakt. Door CSS toe te passen in een andere context (geen website) heb ik dingen gedaan die ik niet wist konden of heel onpractisch leken. Een voorbeeld hiervan is het gebruiken van een 'ol'. Voorheen dacht ik dat lists alleen gebruikt werden voor letterlijke lijsten van tekst op een pagina. Echter snap ik nu dat lists voor veel meer dingen gebruikt kunnen worden, bijvoorbeeld om een hele flexbox met items te huisvesten.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Naast dit soort praktische dingen heb ik ook veel geleerd over mogelijkheden binnen CSS. Het gebruiken van custon properties had mij in het verleden veel moeite kunnen besparen en neem ik zeker mee. Ook snap ik nu hoe ik darkmode makkelijk kan toevoegen aan een website en hoe ik makkelijk animaties kan maken met keyframes.
+
+  Wat JavaScript betreft heb ik echt heel veel vooruitgang gemaakt. Ik was al een beetje bekend met de structuur van de taal maar wat je nou precies kon doen wist ik nog niet. Ik hem inmiddels geleerd hoe ik onclick events kan maken en hoe ik door middel van if statements en counters ook animaties kan maken binnen JS.
+  <img src="readme-images/clickEventJS" width="375px" alt="top">
+  Wat er eigenlijk gebeurt is dat er een op een click op de pagina een functie zich afspeelt. In de fucntie zit een if statement die alleen aanslaat wanneer de target een IMG is. Wanneer dat gebeurt geef je deze 'target' een class mee. Vervolgens kan je in deze class in CSS de animatie laten afspelen.
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Iets dat mij helaas niet is gelukt mmaar wat ik wel heel graag wilde doen is het compleet responsive maken van mijn website. Voor grotere schermen is de website goed te gebruiken, gelukkig want dat was ook de opdracht. Voor mobiele schermen werkt de website jammer genoeg niet.
+  Ik heb geprobeert om de website ook voor mobile te maken door een media query toe te voegen. onderin de CSS. Wanneer het scherm een een width krijgt van minder dan 800px laat ik de flexbox wrappen en geef ik de children een width van 100vw zodat elke listitem fullscreen gaat. De buizen krijgen dan ook een nieuwe width en height zodat ze het scherm meer vullen.
+  Het probleem is alleen dat de tekstbox van het tweede item niet goed naar het midden gaat en dat de powerups die nu met viewport nogsteeds op dezelfde plek bovenaan op het scherm terecht kwamen. Dit heb ik op moeten lossen door de viewport in de animatie aan te passen.
+  <img src="readme-images/mobileNietGoed.jpg" width="375px" alt="bummer uitwerking">
+  <img src="readme-images/mediaQueryMobile.jpg" width="375px" alt="bummer code">
 
 </details>
 
@@ -224,17 +232,17 @@ Rood
   6. Background-image voor Mario Sunshine
   https://www.reddit.com/r/supermariosunshine/comments/im0n9i/looks_like_this_gelato_beach_background_is/
 
-  7. 'Background-image voor Mario Galaxy'
+  7. Background-image voor Mario Galaxy
   https://www.mariowiki.com/Mario_Galaxy_(stage)
 
-  8. 'Background-image voor Mario Odyssey'
+  8. Background-image voor Mario Odyssey
   https://www.vg247.com/dropping-mario-into-a-normal-environment-like-new-donk-city-in-super-mario-odyssey-had-miyamoto-worried
 
 
   ### Gebruikte bronnen voor code (die ik wel zelf snap)
   9. typewriter effect voor de textboxes
   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter 
-  10. codepen die Sanne heeft gemaakt, heb ik toegepast op alle buizen
+  10. codepen die Sanne heeft gemaakt, heb ik toegepast op alle buizen en wel zelf ook verandert
   https://codepen.io/rutgerjohan/pen/oNyxgyE 
 
 </details>
