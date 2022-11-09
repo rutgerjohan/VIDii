@@ -30,6 +30,7 @@ button:not([disabled]) {
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+/* De enige relevante kleuren die ik heb zijn de drie tinten groen voor de buizen. Omdat deze steeds terugkomen heb ik ze dan ook gedefinieerd als custom properties */
 :root {
   --color-pipesLight: lime;
   --color-pipesMedium: green;
@@ -46,9 +47,15 @@ body {
   overflow: hidden;
 }
 
+/* 
+Ik denk dat hier het gebruik van een id onvermijdelijk is omdat de image niet opgeroepen
+kan worden zonder de andere images te raken omdat hij algemener is doordat hij direct in de main staat en buiten de ol.
+Daarnaast is het ook makkelijk om hem dan in JS op de roepen mbv 'getElementById
+*/
 #imageJumpScare {
 	visibility: visible;
 	position: absolute;
+	z-index: 80003;
 	top:0vh;
 	left: 0vw;
 	width: 0vw;
@@ -62,6 +69,7 @@ body {
 }
 #imageJumpScare.jumpscare {
 	animation-play-state: running;
+
 }
 
 img:hover {
@@ -93,13 +101,17 @@ ol li {
 }
 
 
+/*
+Alle 4 de listitems hebben ongeveer dezelfde elementen. De vier blokken code hier onder zijn dus ook van die vier
+delen. Hierin zitten de button, image en p inclusief after.
+*/
 ol li:first-of-type {
 	background-image: url(../assets/scenery64.jpeg);
 	background-size: 25vw 100vh;
 	color: #fff;
 	display: flex;
 	flex-flow: row wrap;
-	font-family: mario64;
+	font-family: mario64, Courier, monospace;
 	font-size: 1.5em;
 	position: relative;
 }
@@ -122,6 +134,12 @@ ol li:first-of-type button {
     inset 0 2em .5em -.5em rgb(0 0 0 / .70);
   display:grid;
   justify-items:center;
+}
+ol li:first-of-type button:hover, ol li:first-of-type button:focus {
+	transition: .75s;
+	box-shadow:
+	inset 0 -1.2em .5em -.5em rgb(0 0 0 / .35),
+    inset 0 2.5em .5em -.5em rgb(0 0 0 / .70);
 }
 ol li:first-of-type button::after {
 	content:"";
@@ -188,7 +206,7 @@ ol li:nth-of-type(2) {
 	color: #fff;
 	display: flex;
 	flex-flow: row wrap;
-	font-family: marioSunshine;
+	font-family: marioSunshine, Helvetica, sans-serif;
 	font-size: 1.1em;
 }
 ol li:nth-of-type(2) button {
@@ -209,6 +227,17 @@ ol li:nth-of-type(2) button {
 		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
 	display:grid;
 	justify-items:center;
+}
+ol li:nth-of-type(2) button:hover, ol li:nth-of-type(2) button:focus {
+	transition: 2s;
+	background-image: 
+		linear-gradient(
+			to left,
+			var(--color-pipesDark),
+			var(--color-pipesMedium),
+			var(--color-pipesMedium) 33%,
+			var(--color-pipesLight)
+		);
 }
 ol li:nth-of-type(2) button::after {
 	content:"";
@@ -284,7 +313,7 @@ ol li:nth-of-type(3) {
 	color: #000;
 	display: flex;
 	flex-flow: row wrap;
-	font-family: marioSunshine;
+	font-family: marioSunshine, Helvetica, sans-serif;
 	font-size: 1.25em;
 }
 ol li:nth-of-type(3) button {
@@ -307,6 +336,11 @@ ol li:nth-of-type(3) button {
 		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
 	display:grid;
 	justify-items:center;
+}
+ol li:nth-of-type(3) button:hover, ol li:nth-of-type(3) button:focus {
+	transition: 3s;
+	height:18vh;
+	width:14vw;
 }
 ol li:nth-of-type(3) button::after {
   content:"";
@@ -385,7 +419,7 @@ ol li:nth-of-type(4) {
 	color: #fff;
 	display: flex;
 	flex-flow: row wrap;
-	font-family: marioOdyssey;
+	font-family: marioOdyssey, Verdana, sans-serif;
 	font-size: 1.1em;
 }
 ol li:nth-of-type(4) button {
@@ -407,6 +441,10 @@ ol li:nth-of-type(4) button {
 		inset 0 -.5em .5em -.5em rgb(0 0 0 / .75);
 	display:grid;
 	justify-items:center;
+}
+ol li:nth-of-type(4) button:hover, ol li:nth-of-type(4) button:focus {
+	transition: 2s;
+	border-radius: 10em 10em 10em 10em;
 }
 ol li:nth-of-type(4) button::after {
   content:"";
@@ -478,16 +516,21 @@ ol li:nth-of-type(4) img.uitDeBuis {
 
 /********************/
 /*ANIMATIES BENOEMEN*/
-/* 	   CLASSES  	 */
+/* 	   images   	 */
 /********************/
-main ol li:first-of-type img.zweven, main ol li:nth-of-type(2) img.zweven, main ol li:nth-of-type(3) img.zweven, main ol li:nth-of-type(4) img.zweven {
+/*
+De animaties van de buizen zijn allemaal hetzelfde dus die heb ik benoemd met ol li button.
+Hetzelfde geldt voor de images van de powerups die op hun plek blijven zweven, die heb ik benoemd met ol li img en dan
+natuurlijk de class die hem met JS laat zweven.
+*/
+main ol li img.zweven {
 	animation: zweven;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease;
 	animation-play-state: paused;
 }
-main ol li:first-of-type img.zweven, main ol li:nth-of-type(2) img.zweven, main ol li:nth-of-type(3) img.zweven, main ol li:nth-of-type(4) img.zweven {
+main ol li img.zweven {
 	animation-play-state: running;
 }
 
@@ -573,6 +616,10 @@ ol li button.playAnimation {
 /********************/
 /*  MEDIA QUERIES   */
 /********************/
+/*
+De website is responsive voor grote laptopschermen, kleinere laptopschermen en ook voor mobiele devices.
+*/
+
 @media only screen and (max-width: 800px) {
 	body {
 		overflow:visible;

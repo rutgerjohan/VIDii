@@ -146,17 +146,17 @@ Rood
 
 
   ### Bevinding 2:
-  
+  Gebruik comments om de structuur van je CSS duidelijker te maken. Vertel wat waar staat en gebruik een logische volgorde.
 
   #### oplossing:
-  
+  Door gebruik te maken van grote comments heb ik onderscheid gemaakt tussen de CSS secties. Zo ben ik begonnen met het importeren van de fonts, daarna de css reset, custom properties, algemene stijling (main), daarna het benoemen van de animatie voor de images, daarna alle animaties die keyframes gebruiken en ten slotte media queries.
 
 
   ### Bevinding 3:
-  
+  Gebruik comments om moeilijke codde uit te leggen. Hierdoor weten mensen wat een moeilijk stuk of heel lang stuk code doet. De leraar weet dan ook dat je het snapt.
 
   #### oplossing:
-  
+  Ik heb met gebruik van comments aangegeven wat sommige code doet omdat deze delen wellicht niet helemaal duidelijk zijn voor iemand die de code voor het eerst leest.
 
 
   ### Bevinding 4:
